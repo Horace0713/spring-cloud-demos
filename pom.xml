@@ -19,11 +19,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.0.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <!--spring-cloud 基础配置-->
+    <!--GatewayAutoConfiguration required a bean of type 'org.springframework.web.reactive.socket.client.WebSocketClient' that could not be found-->
+    <!--搜一下找到问题是因为springcloud的Finchley.SR2版本与springboot 2.1.1不兼容。要么降级到引导2.0.6，要么使用Greenwich.M3，最终采用2.0.6-->
+
     <dependencyManagement>
         <dependencies>
             <dependency>

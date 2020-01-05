@@ -4,9 +4,9 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: neo_route
-        uri: https://cn.bing.com
+      - id: 163
+        uri: https://www.163.com  # 访问http网站，浏览器url不会变（依然是localhost/hello），访问https会变成https://www.163.com
         predicates:
-        - Path=/spring-cloud
+        - Path=/163
   main:
     allow-bean-definition-overriding: true
