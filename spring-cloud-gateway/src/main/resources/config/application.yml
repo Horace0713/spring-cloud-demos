@@ -13,6 +13,11 @@ spring:
         uri: lb://spring-boot-web  # 访问http网站，浏览器url不会变（依然是localhost/hello），访问https会变成https://www.163.com
         predicates:
         - Path=/web/rest/**
+
+      - id: jpa
+        uri: lb://spring-boot-jpa
+        predicates:
+        - Path=/jpa/rest/**
   main:
     allow-bean-definition-overriding: true
   application:
