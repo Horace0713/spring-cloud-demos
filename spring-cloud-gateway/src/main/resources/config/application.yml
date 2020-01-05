@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: https://cn.bing.com
+        predicates:
+        - Path=/spring-cloud
+  main:
+    allow-bean-definition-overriding: true
