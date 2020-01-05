@@ -18,6 +18,11 @@ spring:
         uri: lb://spring-boot-jpa
         predicates:
         - Path=/jpa/rest/**
+
+      - id: retry
+        uri: lb://spring-boot-retry
+        predicates:
+        - Path=/retry/rest/**
   main:
     allow-bean-definition-overriding: true
   application:
