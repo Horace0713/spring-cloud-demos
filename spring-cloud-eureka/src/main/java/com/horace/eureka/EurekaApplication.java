@@ -1,17 +1,19 @@
-package com.horace.gateway;
+package com.horace.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author: Horace
  * @desc:
  * @project: spring-cloud-demos
- * @create: 2020-01-05 10:21
+ * @create: 2020-01-05 14:20
  */
 @SpringBootApplication
-public class Application {
+@EnableEurekaServer
+public class EurekaApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(EurekaApplication.class, args);
     }
 }
